@@ -1,4 +1,7 @@
 export default {
+  // Source Directory: https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-srcdir
+  srcDir: 'src',
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s | ' + process.env.APP_NAME,
