@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button.vue snapshot 1`] = `
+"<div><button type=\\"button\\" class=\\"el-button el-button--primary\\">
+    <!---->
+    <!----><span>Primary</span></button> <button type=\\"button\\" class=\\"el-button el-button--success\\">
+    <!---->
+    <!----><span>Success</span></button></div>"
+`;

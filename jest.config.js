@@ -18,4 +18,7 @@ module.exports = {
   transformIgnorePatterns: [
     '/node_modules/(?!@babel/runtime-corejs2)'
   ],
+  setupFilesAfterEnv: [
+    '<rootDir>/test/setup.js'
+  ],
 }
