@@ -1,3 +1,6 @@
+import Sass from "sass";
+import Fiber from "fibers";
+
 export default {
   // Source Directory: https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-srcdir
   srcDir: 'src',
@@ -17,7 +20,10 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['element-ui/lib/theme-chalk/index.css'],
+  css: [
+    'element-ui/lib/theme-chalk/index.css',
+    '@/assets/global.scss',
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['@/plugins/element-ui'],
@@ -52,6 +58,14 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: [/^element-ui/],
+    loaders: {
+      scss: {
+        implementation: Sass,
+        sassOptions: {
+          fiber: Fiber
+        }
+      }
+    },
     extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
