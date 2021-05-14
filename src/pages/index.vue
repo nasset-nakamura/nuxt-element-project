@@ -2,7 +2,12 @@
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">nuxt-element-project</h1>
+      <h1 class="title">
+        <svg width="60" , height="60" viewBox="0 0 20 20">
+          <path :d="iconMenuOpen" />
+        </svg>
+        <span>nuxt-element-project</span>
+      </h1>
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" rel="noopener noreferrer" class="button--green">
           Documentation
@@ -16,7 +21,15 @@
 </template>
 
 <script>
-export default {};
+import { mdiMenuOpen } from "@mdi/js";
+
+export default {
+  data() {
+    return {
+      iconMenuOpen: mdiMenuOpen,
+    };
+  },
+};
 </script>
 
 <style>
