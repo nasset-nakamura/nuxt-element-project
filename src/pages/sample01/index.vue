@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Logo />
+    <logo />
     <h1 class="title">Sample01</h1>
     <h2>Todo List</h2>
     <div><input v-model="activeFlag" type="checkbox" /> active task only（count：{{ displayTodosCount }}）</div>
@@ -36,19 +36,16 @@ export default {
     const response = await $axios.get("https://jsonplaceholder.typicode.com/todos");
     return { todos: response.data };
   },
-
   data() {
     return {
       activeFlag: true,
     };
   },
-
   head() {
     return {
       title: "Sample01",
     };
   },
-
   computed: {
     displayTodos() {
       if (this.activeFlag) {
@@ -61,11 +58,9 @@ export default {
       return this.displayTodos.length;
     },
   },
-
   mounted() {
     console.log({ todos: this.todos });
   },
-
   methods: {
     addTodo(addItem) {
       const { userId, title } = addItem;
@@ -84,13 +79,11 @@ export default {
         },
       ];
     },
-
     toggleTodo(id) {
       this.todos.forEach((todo) => {
         if (todo.id === id) todo.completed = !todo.completed;
       });
     },
-
     removeTodo(id) {
       const check = confirm("削除します。よろしいですか？");
       if (check) {
