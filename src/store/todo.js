@@ -1,13 +1,10 @@
 export const state = () => ({
-  count: 0,
   todos: [],
   load: true,
   activeFlag: true,
 });
 
 export const getters = {
-  count: (state) => state.count,
-  double: (state) => state.count * 2,
   todos: (state) => state.todos,
   load: (state) => state.load,
   activeFlag: (state) => state.activeFlag,
@@ -21,9 +18,6 @@ export const getters = {
 };
 
 export const mutations = {
-  increment: (state) => state.count++,
-  decrement: (state) => state.count--,
-
   initTodos(state, { todos }) {
     state.todos = todos;
     state.load = false;
