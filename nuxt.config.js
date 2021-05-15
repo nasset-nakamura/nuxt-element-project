@@ -50,6 +50,11 @@ export default {
     'cookie-universal-nuxt',
   ],
 
+  // Router: https://ja.nuxtjs.org/docs/2.x/configuration-glossary/configuration-router/
+  router: {
+    middleware: ['route'],
+  },
+
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 
