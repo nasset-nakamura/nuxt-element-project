@@ -50,6 +50,13 @@ export default {
     'cookie-universal-nuxt',
   ],
 
+  // RuntimeConfig: https://ja.nuxtjs.org/docs/2.x/configuration-glossary/configuration-runtime-config/
+  publicRuntimeConfig: {
+    appUrl: process.env.APP_URL || 'http://localhost:3000',
+    apiUrl: process.env.API_URL || 'http://localhost:8000',
+    apiKey: process.env.API_KEY_CHATWORK,
+  },
+
   // Router: https://ja.nuxtjs.org/docs/2.x/configuration-glossary/configuration-router/
   router: {
     middleware: ['route'],
