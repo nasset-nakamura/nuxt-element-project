@@ -8,7 +8,7 @@
     </div>
     <div class="header" style="text-align: center; margin: 20px">
       <nuxt-link to="/sample06">sample06</nuxt-link> | <nuxt-link to="/sample07">sample07</nuxt-link> |
-      <nuxt-link to="/sample08">sample08</nuxt-link>
+      <nuxt-link to="/sample08">sample08</nuxt-link> | <nuxt-link to="/sample09">sample09</nuxt-link>
     </div>
     <Nuxt />
   </div>

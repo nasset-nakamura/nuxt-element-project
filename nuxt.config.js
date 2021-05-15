@@ -62,8 +62,20 @@ export default {
     middleware: ['route'],
   },
 
+  // Proxy: https://github.com/nuxt-community/proxy-module
+  proxy: {
+    "/chatwork": {
+      target: "https://api.chatwork.com/v2",
+      pathRewrite: {
+        '^/chatwork/': '/'
+      }
+    },
+  },
+
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    proxy: true,
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
