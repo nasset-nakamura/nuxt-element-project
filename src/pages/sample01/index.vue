@@ -59,7 +59,7 @@ export default {
     },
   },
   mounted() {
-    console.log({ todos: this.todos });
+    console.log({ $route: this.$route });
   },
   methods: {
     addTodo(addItem) {
