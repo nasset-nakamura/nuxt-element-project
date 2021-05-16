@@ -1,5 +1,6 @@
 import Sass from "sass";
 import Fiber from "fibers";
+import i18n from "./nuxt-i18n.config"
 
 export default {
   // Source Directory: https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-srcdir
@@ -48,6 +49,8 @@ export default {
     '@nuxtjs/pwa',
     // https://github.com/microcipcip/cookie-universal/tree/master/packages/cookie-universal-nuxt
     'cookie-universal-nuxt',
+    // https://i18n.nuxtjs.org/
+    ['nuxt-i18n', i18n],
   ],
 
   // RuntimeConfig: https://ja.nuxtjs.org/docs/2.x/configuration-glossary/configuration-runtime-config/
