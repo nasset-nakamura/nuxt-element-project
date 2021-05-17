@@ -29,6 +29,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '@/plugins/element-ui',
+    '@/plugins/vee-validate',
     '@/plugins/common',
   ],
 
@@ -89,7 +90,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: [/^element-ui/],
+    transpile: [
+      /^element-ui/,
+      'vee-validate',
+    ],
     loaders: {
       scss: {
         implementation: Sass,
